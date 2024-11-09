@@ -114,7 +114,7 @@ function App() {
             <li><strong>Venue:</strong> <span className="text-[#C7ED67]">Udyaame Chaupal, CSED</span></li>
             <li><strong>Ticket Price:</strong> <span className="text-[#C7ED67]">Solo – Rs.69, Duo – Rs.99</span></li>
             <li><strong>Event Timing:</strong> <span className="text-[#C7ED67]">10:30 AM – 4:30 PM</span></li>
-            <li><strong>Prizes:</strong> <span className="text-[#C7ED67]">br1st – ₹1500, 2nd – ₹1000</span></li>
+            <li><strong>Prizes:</strong> <span className="text-[#C7ED67]">1st – ₹1500, 2nd – ₹1000</span></li>
           </ul>
         </section>
 
