@@ -1,17 +1,25 @@
-import React from 'react';
-import styled from 'styled-components';
-import bg from './assets/bg-1.png';
-import logo from './assets/logo.png';
-import './App.css';
+import React from "react";
+import styled from "styled-components";
+import bg from "./assets/bg-1.png";
+import logo from "./assets/logo.png";
+import "./App.css";
 
 // Button Component
 const Button = () => {
+  const handleClick = () => {
+    window.open("https://forms.gle/tq36yLm7KxEdciXZA", "_blank");
+  };
   return (
     <StyledWrapper>
-      <button className="cssbuttons-io-button">
-        Get started
+      <button className="cssbuttons-io-button" onClick = {handleClick}>
+        Get Tickets!!
         <div className="icon">
-          <svg height={24} width={24} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <svg
+            height={24}
+            width={24}
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <path d="M0 0h24v24H0z" fill="none" />
             <path
               d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
@@ -87,13 +95,13 @@ function App() {
       className="min-h-screen text-white flex flex-col items-center"
       style={{
         backgroundImage: `url(${bg})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
       }}
     >
       {/* Header Section */}
-      <header className="w-full py-8 shadow-lg flex items-center justify-between px-6">
+      <header className="w-full py-8 flex items-center justify-between px-6">
         <div>
           <img src={logo} alt="logo" />
         </div>
@@ -107,45 +115,87 @@ function App() {
       <main className="bg-black bg-opacity-40 w-11/12 md:w-9/12 lg:w-8/12 rounded-xl p-8 mt-10">
         {/* Event Details Section */}
         <section className="mb-10">
-          <h2 className="text-4xl font-bold text-center text-[#b775a3] mb-6 ">Event Details</h2>
+          <h2 className="text-4xl font-bold text-center text-[#b775a3] mb-6 ">
+            Event Details
+          </h2>
           <ul className="text-lg space-y-4">
-            <li><strong>Theme:</strong> <span className="text-[#C7ED67]">CyberPunk</span></li>
-            <li><strong>Date:</strong> <span className="text-[#C7ED67]">27 November, 2024</span></li>
-            <li><strong>Venue:</strong> <span className="text-[#C7ED67]">Udyaame Chaupal, CSED</span></li>
-            <li><strong>Ticket Price:</strong> <span className="text-[#C7ED67]">Solo – Rs.69, Duo – Rs.99</span></li>
-            <li><strong>Event Timing:</strong> <span className="text-[#C7ED67]">10:30 AM – 4:30 PM</span></li>
-            <li><strong>Prizes:</strong> <span className="text-[#C7ED67]">1st – ₹1500, 2nd – ₹1000</span></li>
+            <li>
+              <strong>Date:</strong>{" "}
+              <span className="text-[#C7ED67]">27 November, 2024</span>
+            </li>
+            <li>
+              <strong>Venue:</strong>{" "}
+              <span className="text-[#C7ED67]">Udyaame Chaupal, CSED (AB-XI)</span>
+            </li>
+            <li>
+              <strong>Event Timing:</strong>{" "}
+              <span className="text-[#C7ED67]">10:00 AM – 4:30 PM</span>
+            </li>
+            <li>
+              <strong>Ticket Price:</strong>{" "}
+              <span className="text-[#C7ED67]">Solo – Rs.69, Duo – Rs.99</span>
+            </li>
+            <li>
+              <strong>Prizes:</strong>{" "}
+              <span className="text-[#C7ED67]">1st – ₹1500, 2nd – ₹1000</span>
+            </li>
           </ul>
         </section>
 
         {/* Event Flow Section */}
         <section>
-          <h2 className="text-4xl font-bold text-center text-[#b775a3] mb-6 ">Event Flow</h2>
+          <h2 className="text-4xl font-bold text-center text-[#b775a3] mb-6 ">
+            Event Flow
+          </h2>
           <div className="space-y-8">
             {/* Introduction */}
             <div className="bg-yellow-300 bg-opacity-10 p-4 rounded-lg shadow-md">
-              <h3 className="text-2xl font-semibold text-[#C7ED67]">Introduction & Orientation</h3>
-              <p className="mt-2">30 Minutes - Welcome by the organizing team and a brief guest introduction.</p>
+              <h3 className="text-2xl font-semibold text-[#C7ED67]">
+                Introduction & Orientation
+              </h3>
+              <p className="mt-2">
+                Warm welcome by the organizing team and a brief guest
+                introduction.
+              </p>
             </div>
             {/* Hackathon */}
             <div className="bg-yellow-300 bg-opacity-10 p-4 rounded-lg shadow-md">
-              <h3 className="text-2xl font-semibold text-[#C7ED67]">Hackathon</h3>
+              <h3 className="text-2xl font-semibold text-[#C7ED67]">
+                Hackathon
+              </h3>
               <p className="mt-2">
-                2.5 Hours - Teams solve a riddle to choose their problem statement or receive a pre-assigned one. They create a responsive website under resource restrictions.
+                Teams log into the application, which opens with a riddle
+                leading to a choice of problem statement; unsolved riddles yield
+                a random problem. Teams have 2 hours to develop a responsive
+                website with time-limited resources.
+              </p>
+            </div>
+            {/* Refreshment Break */}
+            <div className="bg-yellow-300 bg-opacity-10 p-4 rounded-lg shadow-md">
+              <h3 className="text-2xl font-semibold text-[#C7ED67]">
+              Refreshment Break
+              </h3>
+              <p className="mt-2">
+              Participants can relax and go for refreshments.
+              Networking opportunities for participants to connect with peers and mentors.
               </p>
             </div>
             {/* Judging */}
             <div className="bg-yellow-300 bg-opacity-10 p-4 rounded-lg shadow-md">
               <h3 className="text-2xl font-semibold text-[#C7ED67]">Judging</h3>
               <p className="mt-2">
-                1 Hour - Teams present their work, highlighting creativity, resource usage, and communication skills.
+                Initial evaluation to shortlist teams based on their websites.
+                Shortlisted teams proceed to present their work, discuss
+                resources, and demonstrate communication skills.
               </p>
             </div>
             {/* Final Judging */}
             <div className="bg-yellow-300 bg-opacity-10 p-4 rounded-lg shadow-md">
-              <h3 className="text-2xl font-semibold text-[#C7ED67]">Final Judging & Winner Announcement</h3>
+              <h3 className="text-2xl font-semibold text-[#C7ED67]">
+                Final Judging & Winner Announcement
+              </h3>
               <p className="mt-2">
-                1.5 Hours - Judges finalize decisions and announce the top 10 teams, with awards for 1st and 2nd place.
+              Final presentations judged by a panel, followed by the announcement of the top 10 teams.
               </p>
             </div>
           </div>
