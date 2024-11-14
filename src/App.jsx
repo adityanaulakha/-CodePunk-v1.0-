@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import bg from "./assets/bg-1.png";
 import logo from "./assets/logo.png";
-import introVideo from "./assets/CodePunk.mp4"; // Replace with your video path
+import introVideo from "./assets/entry.mp4"; 
 import "./App.css";
 
 // Styled Components
