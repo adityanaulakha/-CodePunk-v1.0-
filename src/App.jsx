@@ -194,7 +194,7 @@ function App() {
                   </li>
                   <li>
                     <strong>Prizes:</strong>{" "}
-                    <span className="text-[#C7ED67]">1st – ₹1500, 2nd – ₹1000</span>
+                    <span className="text-[#C7ED67]">Exciting Prizes !!</span>
                   </li>
                 </ul>
               </section>
