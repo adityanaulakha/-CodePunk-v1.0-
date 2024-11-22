@@ -162,6 +162,31 @@ const LandingPage = () => {
               </div>
             </section>
 
+
+
+
+            <section>
+  <h2 className="text-4xl font-bold text-center text-[#b775a3] mb-6 mt-6">
+    Event Timeline
+  </h2>
+  <div className="space-y-8">
+    <div className="bg-yellow-300/10 p-4 rounded-lg shadow-md">
+      {/* Orientation */}
+      <div className="mt-4 flex justify-center">
+        <img 
+          src="/src/timeline.png" 
+          alt="Orientation" 
+          className="mt-2 rounded-md shadow-md"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
             {/* Why Participants */}
             <section>
               <h2 className="text-4xl font-bold text-center text-[#b775a3] mb-6 mt-6">
