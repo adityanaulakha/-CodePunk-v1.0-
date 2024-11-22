@@ -15,3 +15,31 @@ body, html {
   padding: 0;
   overflow: hidden;
 }
+
+/* Default: Desktop view */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 1.5rem; /* Adjust padding as needed */
+}
+
+/* Center the logo and button in mobile view */
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+  .header-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;   /* Center align items */
+    gap: 1rem;             /* Add spacing between logo and button */
+  }
+
+  .logo-container {
+    text-align: center; /* Ensure logo is centered */
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center; /* Center button */
+    width: 100%; /* Optional: Make button container responsive */
+  }
+}

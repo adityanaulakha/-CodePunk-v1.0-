@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import logo from "../logo.png";
+import timeline from "../logo-1.jpg";
 // import bgLoopDesktop from "../bg-loop-desktop.mov";
 
 const LandingPage = () => {
@@ -96,32 +97,18 @@ const LandingPage = () => {
       <section ref={mainContentRef} className="relative snap-start">
         <div className="min-h-screen w-full bg-black/80 backdrop-blur-lg text-white relative z-10">
           {/* Header Section */}
-          <header className="w-full py-8 flex items-center justify-between px-6">
-            <div>
+          <header className="header-container">
+            <div className="logo-container">
               <img src={logo} alt="logo" />
             </div>
-            <div>
+            <div className="button-container">
               <Button />
             </div>
           </header>
 
+
           {/* Main Content */}
           <main className="bg-black/40 w-11/12 md:w-9/12 lg:w-8/12 mx-auto rounded-xl p-8 mt-10">
-            {/* About Us */}
-            <section className="mb-10">
-              <h2 className="text-4xl font-bold text-center text-[#b775a3] mb-6">
-                About Us
-              </h2>
-              <div className="bg-yellow-300/10 p-4 rounded-lg shadow-md">
-                <ul className="text-lg space-y-4">
-                  <li>
-                    <span className="text-[#C7ED67]">The Droid Club: Where Innovation Meets Growth <br /><br />
-                    We’re not just a club; we’re a movement. At Droid, we ignite curiosity through school visits on IoT, AI/ML, Game Development, and Web Development. From sharing tech trends on Social Media platforms to hosting hands-on workshops, we blend learning with doing. Our groundbreaking projects, like the RC car and many others (IoT + AI/ML robot), are shaping the future. More than a team, we’re a family—empowering each other to grow, innovate, and excel.
-                    </span>
-                  </li>
-                </ul>
-              </div>
-            </section>
 
             {/* Event Intro */}
             <section className="mb-10">
@@ -132,29 +119,49 @@ const LandingPage = () => {
               <ul className="text-lg space-y-4">
                 <li>
                   <span className="text-[#C7ED67]">HACK THE MATRIX, CODE LIKE A PUNK” <br /> <br />
-              💡 Ready to redefine the future? {"<CodePunk v1.O> is no ordinary hackathon—it’s your gateway to unlocking AI’s true potential. With adrenaline-pumping challenges and limitless opportunities to innovate, this is where you’ll create the extraordinary. Don’t just follow the tech revolution—lead it!  "}
+              💡 CodePunk kicks off with an orientation, followed by a hackathon where teams create AI-powered solutions under time pressure, and concludes with presentations and judging to determine the winners.
               </span>
                 </li>
               </ul>
               </div>
             </section>
 
-            {/* Event Intro */}
-            <section className="mb-10">
-              <h2 className="text-4xl font-bold text-center text-[#b775a3] mb-6">
-                Event Intro  
+            {/* Event Timeline */}
+            <section>
+              <h2 className="text-4xl font-bold text-center text-[#b775a3] mb-6 mt-6">
+                Event Timeline  
               </h2>
-              <div className="bg-yellow-300/10 p-4 rounded-lg shadow-md">
-                <ul className="text-lg space-y-4">
-                  <li>
-                    <span className="text-[#C7ED67]">"CodePunk kicks off with an orientation, followed by a hackathon where teams create AI-powered solutions under time pressure, and concludes with presentations and judging to determine the winners."
-                </span>
-                  </li>
-                </ul>
+              <div className="space-y-8">
+                {/* Experience AI’s Magic:  */}
+                <div className="bg-yellow-300/10 p-4 rounded-lg shadow-md">
+                  <h3 className="text-2xl font-semibold text-[#C7ED67] mt-4">
+                  Orientation:
+                  </h3>
+                  <p className="mt-2">
+                  Start strong with an inspiring introduction.     
+                  </p>
+                  <h3 className="text-2xl font-semibold text-[#C7ED67] mt-4">
+                    Hackathon: 
+                  </h3>
+                  <p className="mt-2">
+                    Build AI-powered solutions under time pressure.   
+                  </p>
+                  <h3 className="text-2xl font-semibold text-[#C7ED67] mt-4">
+                    Presentation: 
+                  </h3>
+                  <p className="mt-2">
+                  Showcase your ideas to expert judges and battle for the crown.   
+                  </p>
+                  <h3 className="text-2xl font-semibold text-[#C7ED67] mt-4">
+                    Prize Distribution: 
+                  </h3>
+                  <p className="mt-2">
+                  Winner Prize Distribution by Judges. 
+                  </p>
+                </div>
               </div>
             </section>
 
-            
             {/* Why Participants */}
             <section>
               <h2 className="text-4xl font-bold text-center text-[#b775a3] mb-6 mt-6">
@@ -200,13 +207,12 @@ const LandingPage = () => {
                   Build confidence and refine your presentation skills.    
                   </p>
                 </div>
-                
               </div>
             </section>
 
             <section className="mb-10">
               <h2 className="text-4xl font-bold text-center text-[#b775a3] mb-6 mt-6">
-              Prices
+              Prizes
               </h2>
               <div className="bg-yellow-300/10 p-4 rounded-lg shadow-md">
                 <ul className="text-lg space-y-4">
@@ -214,6 +220,21 @@ const LandingPage = () => {
                     <span className="text-[#C7ED67]">🏆 Compete. Innovate. Win. <br /> <br />  
                     Gear up for {"<CodePunk v1.O>! Turn ideas into reality and claim exciting prizes. The future is yours to create"}—
                     {"<CodePunk v1.O>  isn’t just a competition—it’s your launchpad to innovation, growth, and success."}
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </section>
+            {/* About Us */}
+            <section className="mb-10">
+              <h2 className="text-4xl font-bold text-center text-[#b775a3] mb-6">
+                About Us
+              </h2>
+              <div className="bg-yellow-300/10 p-4 rounded-lg shadow-md">
+                <ul className="text-lg space-y-4">
+                  <li>
+                    <span className="text-[#C7ED67]">The Droid Club: Where Innovation Meets Growth <br /><br />
+                    We’re not just a club; we’re a movement. At Droid, we ignite curiosity through school visits on IoT, AI/ML, Game Development, and Web Development. From sharing tech trends on Social Media platforms to hosting hands-on workshops, we blend learning with doing. Our groundbreaking projects, like the RC car and many others (IoT + AI/ML robot), are shaping the future. More than a team, we’re a family—empowering each other to grow, innovate, and excel.
                     </span>
                   </li>
                 </ul>
