@@ -116,13 +116,15 @@ const LandingPage = () => {
               <h2 className="text-4xl font-bold text-center text-[#b775a3] mb-6">
                 About Us
               </h2>
-              <ul className="text-lg space-y-4">
-                <li>
-                  <span className="text-[#C7ED67]">The Droid Club: Where Innovation Meets Growth <br /><br />
-                  We’re not just a club; we’re a movement. At Droid, we ignite curiosity through school visits on IoT, AI/ML, Game Development, and Web Development. From sharing tech trends on Social Media platforms to hosting hands-on workshops, we blend learning with doing. Our groundbreaking projects, like the RC car and many others (IoT + AI/ML robot), are shaping the future. More than a team, we’re a family—empowering each other to grow, innovate, and excel.
-                  </span>
-                </li>
-              </ul>
+              <div className="bg-yellow-300/10 p-4 rounded-lg shadow-md">
+                <ul className="text-lg space-y-4">
+                  <li>
+                    <span className="text-[#C7ED67]">The Droid Club: Where Innovation Meets Growth <br /><br />
+                    We’re not just a club; we’re a movement. At Droid, we ignite curiosity through school visits on IoT, AI/ML, Game Development, and Web Development. From sharing tech trends on Social Media platforms to hosting hands-on workshops, we blend learning with doing. Our groundbreaking projects, like the RC car and many others (IoT + AI/ML robot), are shaping the future. More than a team, we’re a family—empowering each other to grow, innovate, and excel.
+                    </span>
+                  </li>
+                </ul>
+              </div>
             </section>
 
             {/* Event Intro */}
@@ -130,6 +132,7 @@ const LandingPage = () => {
               <h2 className="text-4xl font-bold text-center text-[#b775a3] mb-6">
                 Event Intro  
               </h2>
+              <div className="bg-yellow-300/10 p-4 rounded-lg shadow-md">
               <ul className="text-lg space-y-4">
                 <li>
                   <span className="text-[#C7ED67]">HACK THE MATRIX, CODE LIKE A PUNK” <br /> <br />
@@ -137,43 +140,25 @@ const LandingPage = () => {
               </span>
                 </li>
               </ul>
-            </section>
-
-            {/* Event Flow Section */}
-            <section>
-              <h2 className="text-4xl font-bold text-center text-[#b775a3] mb-6">
-                Event Flow
-              </h2>
-              <div className="space-y-8">
-                {/* Introduction */}
-                <div className="bg-yellow-300/10 p-4 rounded-lg shadow-md">
-                  <h3 className="text-2xl font-semibold text-[#C7ED67]">
-                    Orientation
-                  </h3>
-                  <p className="mt-2">
-                  Start strong with an inspiring introduction.  
-                  </p>
-                </div>
-                {/* Hackathon */}
-                <div className="bg-yellow-300/10 p-4 rounded-lg shadow-md">
-                  <h3 className="text-2xl font-semibold text-[#C7ED67]">
-                    Hackathon
-                  </h3>
-                  <p className="mt-2">
-                  Build AI-powered solutions under time pressure
-                  </p>
-                </div>
-                {/* Presentation */}
-                <div className="bg-yellow-300/10 p-4 rounded-lg shadow-md">
-                  <h3 className="text-2xl font-semibold text-[#C7ED67]">
-                    Presentation
-                  </h3>
-                  <p className="mt-2">
-                  Showcase your ideas to expert judges and battle for the crown.  
-                  </p>
-                </div>
               </div>
             </section>
+
+            {/* Event Intro */}
+            <section className="mb-10">
+              <h2 className="text-4xl font-bold text-center text-[#b775a3] mb-6">
+                Event Intro  
+              </h2>
+              <div className="bg-yellow-300/10 p-4 rounded-lg shadow-md">
+                <ul className="text-lg space-y-4">
+                  <li>
+                    <span className="text-[#C7ED67]">"CodePunk kicks off with an orientation, followed by a hackathon where teams create AI-powered solutions under time pressure, and concludes with presentations and judging to determine the winners."
+                </span>
+                  </li>
+                </ul>
+              </div>
+            </section>
+
+            
             {/* Why Participants */}
             <section>
               <h2 className="text-4xl font-bold text-center text-[#b775a3] mb-6 mt-6">
@@ -182,58 +167,44 @@ const LandingPage = () => {
               <div className="space-y-8">
                 {/* Experience AI’s Magic:  */}
                 <div className="bg-yellow-300/10 p-4 rounded-lg shadow-md">
-                  <h3 className="text-2xl font-semibold text-[#C7ED67]">
+                  <h3 className="text-2xl font-semibold text-[#C7ED67] mt-4">
                   🚀 Experience AI’s Magic: 
                   </h3>
                   <p className="mt-2">
                   Discover how AI amplifies your creativity.    
                   </p>
-                </div>
-                {/*  Rise Under Pressure:  */}
-                <div className="bg-yellow-300/10 p-4 rounded-lg shadow-md">
-                  <h3 className="text-2xl font-semibold text-[#C7ED67]">
-                  ⏳ Rise Under Pressure: 
+                  <h3 className="text-2xl font-semibold text-[#C7ED67] mt-4">
+                  ⏳ Rise Under Pressure 
                   </h3>
                   <p className="mt-2">
-                  Solve real-world problems in record time.  
+                  Solve real-world problems in record time.   
                   </p>
-                </div>
-                {/* Find Your Genius:  */}
-                <div className="bg-yellow-300/10 p-4 rounded-lg shadow-md">
-                  <h3 className="text-2xl font-semibold text-[#C7ED67]">
+                  <h3 className="text-2xl font-semibold text-[#C7ED67] mt-4">
                   ✨ Find Your Genius: 
                   </h3>
                   <p className="mt-2">
                   Push limits and achieve the unimaginable.    
                   </p>
-                </div>
-                {/*  Skill Up for the Future:   */}
-                <div className="bg-yellow-300/10 p-4 rounded-lg shadow-md">
-                  <h3 className="text-2xl font-semibold text-[#C7ED67]">
-                  💼 Skill Up for the Future:  
+                  <h3 className="text-2xl font-semibold text-[#C7ED67] mt-4">
+                  💼 Skill Up for the Future: 
                   </h3>
                   <p className="mt-2">
-                  Master AI, teamwork, and problem-solving.      
+                  Master AI, teamwork, and problem-solving. 
                   </p>
-                </div>
-                {/*  Compete & Collaborate:   */}
-                <div className="bg-yellow-300/10 p-4 rounded-lg shadow-md">
-                  <h3 className="text-2xl font-semibold text-[#C7ED67]">
-                  🤝Compete & Collaborate:   
+                  <h3 className="text-2xl font-semibold text-[#C7ED67] mt-4">
+                  🤝 Compete & Collaborate: 
                   </h3>
                   <p className="mt-2">
-                  Innovate with peers in an electric atmosphere.       
+                  Innovate with peers in an electric atmosphere.    
                   </p>
-                </div>
-                {/*  💪 Grow into a Leader:    */}
-                <div className="bg-yellow-300/10 p-4 rounded-lg shadow-md">
-                  <h3 className="text-2xl font-semibold text-[#C7ED67]">
-                  💪 Grow into a Leader:    
+                  <h3 className="text-2xl font-semibold text-[#C7ED67] mt-4">
+                  💪 Grow into a Leader: 
                   </h3>
                   <p className="mt-2">
-                  Build confidence and refine your presentation skills.        
+                  Build confidence and refine your presentation skills.    
                   </p>
                 </div>
+                
               </div>
             </section>
 
@@ -241,15 +212,16 @@ const LandingPage = () => {
               <h2 className="text-4xl font-bold text-center text-[#b775a3] mb-6 mt-6">
               Prices
               </h2>
-              <ul className="text-lg space-y-4">
-                <li>
-                  <span className="text-[#C7ED67]">🏆 Compete. Innovate. Win. <br /> <br />  
-                  Gear up for {"<CodePunk v1.O>! Turn ideas into reality and claim exciting prizes. The future is yours to create"}—
-                  {"<CodePunk v1.O>  isn’t just a competition—it’s your launchpad to innovation, growth, and success."}
-
-                  </span>
-                </li>
-              </ul>
+              <div className="bg-yellow-300/10 p-4 rounded-lg shadow-md">
+                <ul className="text-lg space-y-4">
+                  <li>
+                    <span className="text-[#C7ED67]">🏆 Compete. Innovate. Win. <br /> <br />  
+                    Gear up for {"<CodePunk v1.O>! Turn ideas into reality and claim exciting prizes. The future is yours to create"}—
+                    {"<CodePunk v1.O>  isn’t just a competition—it’s your launchpad to innovation, growth, and success."}
+                    </span>
+                  </li>
+                </ul>
+              </div>
             </section>
           </main>
 
