@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import introDesktopVideo from '../entry-desktop.mp4'; // Replace with your desktop video path
+import introDesktopVideo from '../entry-desktop.mp4';
 
 // Styled Component for Fullscreen Video
 const FullScreenVideoWrapper = styled.div`
@@ -14,6 +14,8 @@ const FullScreenVideoWrapper = styled.div`
   display: ${({ isPlaying }) => (isPlaying ? 'flex' : 'none')};
   justify-content: center;
   align-items: center;
+  opacity: ${({ isFadingOut }) => (isFadingOut ? 0 : 1)};
+  transition: opacity 1s ease-in-out; /* Smooth fade-out transition */
 
   video {
     width: 100%;
@@ -24,20 +26,24 @@ const FullScreenVideoWrapper = styled.div`
 
 const IntroVideo = ({ onVideoEnd }) => {
   const [isVideoPlaying, setIsVideoPlaying] = useState(true);
+  const [isFadingOut, setIsFadingOut] = useState(false);
 
   // Handle video end and timeout fallback
   useEffect(() => {
-    const fallbackTimeout = setTimeout(() => setIsVideoPlaying(false), 10000); // 10 seconds fallback
+    const fallbackTimeout = setTimeout(() => handleVideoEnd(), 10000); // 10 seconds fallback
     return () => clearTimeout(fallbackTimeout);
   }, []);
 
   const handleVideoEnd = () => {
-    setIsVideoPlaying(false);
-    if (onVideoEnd) onVideoEnd();
+    setIsFadingOut(true); // Start fade-out
+    setTimeout(() => {
+      setIsVideoPlaying(false); // Hide after fade-out
+      if (onVideoEnd) onVideoEnd();
+    }, 1000); // Match the fade-out duration
   };
 
   return (
-    <FullScreenVideoWrapper isPlaying={isVideoPlaying}>
+    <FullScreenVideoWrapper isPlaying={isVideoPlaying} isFadingOut={isFadingOut}>
       <video autoPlay muted onEnded={handleVideoEnd}>
         <source src={introDesktopVideo} type="video/mp4" />
         Your browser does not support the video tag.

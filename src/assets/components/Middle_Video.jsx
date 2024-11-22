@@ -1,25 +1,25 @@
 import React, { useRef, useState, useEffect } from "react";
 import logo from "../logo.png";
-import bgLoopDesktop from "../bg-loop-desktop.webm";
+// import bgLoopDesktop from "../bg-loop-desktop.webm";
 
 const LandingPage = () => {
   const mainContentRef = useRef(null);
-  const [isMobile, setIsMobile] = useState(false);
+  // const [isMobile, setIsMobile] = useState(false);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.matchMedia("(max-width: 768px)").matches);
-    };
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     setIsMobile(window.matchMedia("(max-width: 768px)").matches);
+  //   };
 
-    // Set initial state
-    handleResize();
+  //   // Set initial state
+  //   handleResize();
 
-    // Add event listener for resizing
-    window.addEventListener("resize", handleResize);
+  //   // Add event listener for resizing
+  //   window.addEventListener("resize", handleResize);
 
-    // Cleanup event listener
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  //   // Cleanup event listener
+  //   return () => window.removeEventListener("resize", handleResize);
+  // }, []);
 
   const handleExploreClick = () => {
     mainContentRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -61,10 +61,10 @@ const LandingPage = () => {
   };
 
   return (
-    <div className="h-screen overflow-y-auto snap-y snap-mandatory">
-      {/* Video Section */}
-      <section className="relative h-screen w-full snap-start">
-        {/* Video Background */}
+    <div className="h-screen overflow-y-auto snap-y snap-mandatory" style={{ backgroundColor: 'black' }}>
+     
+      {/* <section className="relative h-screen w-full snap-start">
+        
         <div className="fixed inset-0 w-full h-screen overflow-hidden z-0">
           <video
             autoPlay
@@ -73,12 +73,12 @@ const LandingPage = () => {
             playsInline
             className="absolute inset-0 w-full h-full object-cover"
           >
-            <source src={bgLoopDesktop} type="video/webm" />
+            <source src={bgLoopDesktop} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-        </div>
+    </div>
 
-        {/* Explore Button Overlay */}
+
         <div className="fixed inset-0 flex flex-col items-center justify-center z-10">
           <button
             onClick={handleExploreClick}
@@ -90,7 +90,7 @@ const LandingPage = () => {
             Explore More
           </button>
         </div>
-      </section>
+      </section> */}
 
       {/* Main Content Section */}
       <section ref={mainContentRef} className="relative snap-start">
