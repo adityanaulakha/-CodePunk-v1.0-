@@ -1,7 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import logo from "../logo.png";
 import bgLoopDesktop from "../bg-loop-desktop.webm";
-import bgLoopMobile from "../bg-loop-mobile.mp4";
 
 const LandingPage = () => {
   const mainContentRef = useRef(null);
@@ -74,10 +73,7 @@ const LandingPage = () => {
             playsInline
             className="absolute inset-0 w-full h-full object-cover"
           >
-            <source
-              src={isMobile ? bgLoopMobile : bgLoopDesktop}
-              type="video/mp4"
-            />
+            <source src={bgLoopDesktop} type="video/webm" />
             Your browser does not support the video tag.
           </video>
         </div>
