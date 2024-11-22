@@ -1,20 +1,36 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from "react";
 import logo from "../logo.png";
-import bgLoopVideo from '../bg-loop.mp4';
+import bgLoopDesktop from "../bg-loop-desktop.mp4";
+import bgLoopMobile from "../bg-loop-mobile.mp4";
 
 const LandingPage = () => {
   const mainContentRef = useRef(null);
-  
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.matchMedia("(max-width: 768px)").matches);
+    };
+
+    // Set initial state
+    handleResize();
+
+    // Add event listener for resizing
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup event listener
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const handleExploreClick = () => {
-    mainContentRef.current?.scrollIntoView({ behavior: 'smooth' });
+    mainContentRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-  // Button Component
   const Button = () => {
     const handleClick = () => {
       window.open("https://forms.gle/tq36yLm7KxEdciXZA", "_blank");
     };
-    
+
     return (
       <button
         onClick={handleClick}
@@ -58,7 +74,10 @@ const LandingPage = () => {
             playsInline
             className="absolute inset-0 w-full h-full object-cover"
           >
-            <source src={bgLoopVideo} type="video/mp4" />
+            <source
+              src={isMobile ? bgLoopMobile : bgLoopDesktop}
+              type="video/mp4"
+            />
             Your browser does not support the video tag.
           </video>
         </div>
@@ -92,31 +111,30 @@ const LandingPage = () => {
 
           {/* Main Content */}
           <main className="bg-black/40 w-11/12 md:w-9/12 lg:w-8/12 mx-auto rounded-xl p-8 mt-10">
-            {/* Event Details Section */}
+            {/* About Us */}
             <section className="mb-10">
               <h2 className="text-4xl font-bold text-center text-[#b775a3] mb-6">
-                Event Details
+                About Us
               </h2>
               <ul className="text-lg space-y-4">
                 <li>
-                  <strong>Date:</strong>{" "}
-                  <span className="text-[#C7ED67]">27 November, 2024</span>
+                  <span className="text-[#C7ED67]">The Droid Club: Where Innovation Meets Growth <br /><br />
+                  We’re not just a club; we’re a movement. At Droid, we ignite curiosity through school visits on IoT, AI/ML, Game Development, and Web Development. From sharing tech trends on Social Media platforms to hosting hands-on workshops, we blend learning with doing. Our groundbreaking projects, like the RC car and many others (IoT + AI/ML robot), are shaping the future. More than a team, we’re a family—empowering each other to grow, innovate, and excel.
+                  </span>
                 </li>
+              </ul>
+            </section>
+
+            {/* Event Intro */}
+            <section className="mb-10">
+              <h2 className="text-4xl font-bold text-center text-[#b775a3] mb-6">
+                Event Intro  
+              </h2>
+              <ul className="text-lg space-y-4">
                 <li>
-                  <strong>Venue:</strong>{" "}
-                  <span className="text-[#C7ED67]">Udyaame Chaupal, CSED (AB-XI)</span>
-                </li>
-                <li>
-                  <strong>Event Timing:</strong>{" "}
-                  <span className="text-[#C7ED67]">10:00 AM – 4:30 PM</span>
-                </li>
-                <li>
-                  <strong>Ticket Price:</strong>{" "}
-                  <span className="text-[#C7ED67]">Solo – Rs.69, Duo – Rs.99</span>
-                </li>
-                <li>
-                  <strong>Prizes:</strong>{" "}
-                  <span className="text-[#C7ED67]">Exciting Prizes !!</span>
+                  <span className="text-[#C7ED67]">HACK THE MATRIX, CODE LIKE A PUNK” <br /> <br />
+              💡 Ready to redefine the future? {"<CodePunk v1.O> is no ordinary hackathon—it’s your gateway to unlocking AI’s true potential. With adrenaline-pumping challenges and limitless opportunities to innovate, this is where you’ll create the extraordinary. Don’t just follow the tech revolution—lead it!  "}
+              </span>
                 </li>
               </ul>
             </section>
@@ -130,11 +148,10 @@ const LandingPage = () => {
                 {/* Introduction */}
                 <div className="bg-yellow-300/10 p-4 rounded-lg shadow-md">
                   <h3 className="text-2xl font-semibold text-[#C7ED67]">
-                    Introduction & Orientation
+                    Orientation
                   </h3>
                   <p className="mt-2">
-                    Warm welcome by the organizing team and a brief guest
-                    introduction.
+                  Start strong with an inspiring introduction.  
                   </p>
                 </div>
                 {/* Hackathon */}
@@ -143,41 +160,96 @@ const LandingPage = () => {
                     Hackathon
                   </h3>
                   <p className="mt-2">
-                    Teams log into the application, which opens with a riddle
-                    leading to a choice of problem statement; unsolved riddles yield
-                    a random problem. Teams have 2 hours to develop a responsive
-                    website with time-limited resources.
+                  Build AI-powered solutions under time pressure
                   </p>
                 </div>
-                {/* Refreshment Break */}
+                {/* Presentation */}
                 <div className="bg-yellow-300/10 p-4 rounded-lg shadow-md">
                   <h3 className="text-2xl font-semibold text-[#C7ED67]">
-                    Refreshment Break
+                    Presentation
                   </h3>
                   <p className="mt-2">
-                    Participants can relax and go for refreshments.
-                    Networking opportunities for participants to connect with peers and mentors.
-                  </p>
-                </div>
-                {/* Judging */}
-                <div className="bg-yellow-300/10 p-4 rounded-lg shadow-md">
-                  <h3 className="text-2xl font-semibold text-[#C7ED67]">Judging</h3>
-                  <p className="mt-2">
-                    Initial evaluation to shortlist teams based on their websites.
-                    Shortlisted teams proceed to present their work, discuss
-                    resources, and demonstrate communication skills.
-                  </p>
-                </div>
-                {/* Final Judging */}
-                <div className="bg-yellow-300/10 p-4 rounded-lg shadow-md">
-                  <h3 className="text-2xl font-semibold text-[#C7ED67]">
-                    Final Judging & Winner Announcement
-                  </h3>
-                  <p className="mt-2">
-                    Final presentations judged by a panel, followed by the announcement of the top 10 teams.
+                  Showcase your ideas to expert judges and battle for the crown.  
                   </p>
                 </div>
               </div>
+            </section>
+            {/* Why Participants */}
+            <section>
+              <h2 className="text-4xl font-bold text-center text-[#b775a3] mb-6 mt-6">
+                Why Participate?  
+              </h2>
+              <div className="space-y-8">
+                {/* Experience AI’s Magic:  */}
+                <div className="bg-yellow-300/10 p-4 rounded-lg shadow-md">
+                  <h3 className="text-2xl font-semibold text-[#C7ED67]">
+                  🚀 Experience AI’s Magic: 
+                  </h3>
+                  <p className="mt-2">
+                  Discover how AI amplifies your creativity.    
+                  </p>
+                </div>
+                {/*  Rise Under Pressure:  */}
+                <div className="bg-yellow-300/10 p-4 rounded-lg shadow-md">
+                  <h3 className="text-2xl font-semibold text-[#C7ED67]">
+                  ⏳ Rise Under Pressure: 
+                  </h3>
+                  <p className="mt-2">
+                  Solve real-world problems in record time.  
+                  </p>
+                </div>
+                {/* Find Your Genius:  */}
+                <div className="bg-yellow-300/10 p-4 rounded-lg shadow-md">
+                  <h3 className="text-2xl font-semibold text-[#C7ED67]">
+                  ✨ Find Your Genius: 
+                  </h3>
+                  <p className="mt-2">
+                  Push limits and achieve the unimaginable.    
+                  </p>
+                </div>
+                {/*  Skill Up for the Future:   */}
+                <div className="bg-yellow-300/10 p-4 rounded-lg shadow-md">
+                  <h3 className="text-2xl font-semibold text-[#C7ED67]">
+                  💼 Skill Up for the Future:  
+                  </h3>
+                  <p className="mt-2">
+                  Master AI, teamwork, and problem-solving.      
+                  </p>
+                </div>
+                {/*  Compete & Collaborate:   */}
+                <div className="bg-yellow-300/10 p-4 rounded-lg shadow-md">
+                  <h3 className="text-2xl font-semibold text-[#C7ED67]">
+                  🤝Compete & Collaborate:   
+                  </h3>
+                  <p className="mt-2">
+                  Innovate with peers in an electric atmosphere.       
+                  </p>
+                </div>
+                {/*  💪 Grow into a Leader:    */}
+                <div className="bg-yellow-300/10 p-4 rounded-lg shadow-md">
+                  <h3 className="text-2xl font-semibold text-[#C7ED67]">
+                  💪 Grow into a Leader:    
+                  </h3>
+                  <p className="mt-2">
+                  Build confidence and refine your presentation skills.        
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section className="mb-10">
+              <h2 className="text-4xl font-bold text-center text-[#b775a3] mb-6 mt-6">
+              Prices
+              </h2>
+              <ul className="text-lg space-y-4">
+                <li>
+                  <span className="text-[#C7ED67]">🏆 Compete. Innovate. Win. <br /> <br />  
+                  Gear up for {"<CodePunk v1.O>! Turn ideas into reality and claim exciting prizes. The future is yours to create"}—
+                  {"<CodePunk v1.O>  isn’t just a competition—it’s your launchpad to innovation, growth, and success."}
+
+                  </span>
+                </li>
+              </ul>
             </section>
           </main>
 
