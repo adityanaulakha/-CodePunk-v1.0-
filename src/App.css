@@ -8,3 +8,10 @@
 body{
     font-family: Matrix, sans-serif;
 }
+
+body, html {
+  background-color: black; /* Match your video background */
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
