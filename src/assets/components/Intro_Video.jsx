@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import introDesktopVideo from '../entry-desktop.mp4';
+// import introDesktopVideo from '../entry-desktop.mp4';
 
 // Styled Component for Fullscreen Video
 const FullScreenVideoWrapper = styled.div`
@@ -45,7 +45,7 @@ const IntroVideo = ({ onVideoEnd }) => {
   return (
     <FullScreenVideoWrapper isPlaying={isVideoPlaying} isFadingOut={isFadingOut}>
       <video autoPlay muted onEnded={handleVideoEnd}>
-        <source src={introDesktopVideo} type="video/mp4" />
+        <source src='https://res.cloudinary.com/dqdtbavzj/video/upload/f_auto:video,q_auto/xp1zvfrrrctojm9jdvkj' type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </FullScreenVideoWrapper>
