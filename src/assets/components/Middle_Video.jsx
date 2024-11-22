@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import logo from "../logo.png";
-import bgLoopDesktop from "../bg-loop-desktop.mp4";
+import bgLoopDesktop from "../bg-loop-desktop.webm";
 import bgLoopMobile from "../bg-loop-mobile.mp4";
 
 const LandingPage = () => {
