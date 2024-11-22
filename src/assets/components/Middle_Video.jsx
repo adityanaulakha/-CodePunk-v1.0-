@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import logo from "../logo.png";
-// import bgLoopDesktop from "../bg-loop-desktop.webm";
+// import bgLoopDesktop from "../bg-loop-desktop.mov";
 
 const LandingPage = () => {
   const mainContentRef = useRef(null);
@@ -63,7 +63,7 @@ const LandingPage = () => {
   return (
     <div className="h-screen overflow-y-auto snap-y snap-mandatory" style={{ backgroundColor: 'black' }}>
      
-      {/* <section className="relative h-screen w-full snap-start">
+      <section className="relative h-screen w-full snap-start">
         
         <div className="fixed inset-0 w-full h-screen overflow-hidden z-0">
           <video
@@ -73,7 +73,7 @@ const LandingPage = () => {
             playsInline
             className="absolute inset-0 w-full h-full object-cover"
           >
-            <source src={bgLoopDesktop} type="video/mp4" />
+            <source src='https://res.cloudinary.com/dqdtbavzj/video/upload/f_auto:video,q_auto/ryala9m4myvatpj8uvr9' type="video/mp4" />
             Your browser does not support the video tag.
           </video>
     </div>
@@ -90,7 +90,7 @@ const LandingPage = () => {
             Explore More
           </button>
         </div>
-      </section> */}
+      </section>
 
       {/* Main Content Section */}
       <section ref={mainContentRef} className="relative snap-start">
