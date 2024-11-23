@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import logo from "../logo.png";
-import timeline from "../logo-1.jpg";
+// import timeline from "../logo-1.jpg";
 // import bgLoopDesktop from "../bg-loop-desktop.mov";
 
 const LandingPage = () => {
@@ -128,38 +128,18 @@ const LandingPage = () => {
 
             {/* Event Timeline */}
             <section>
-              <h2 className="text-4xl font-bold text-center text-[#b775a3] mb-6 mt-6">
+              {/* <h2 className="text-4xl font-bold text-center text-[#b775a3] mb-6 mt-6">
                 Event Timeline  
-              </h2>
+              </h2> */}
               <div className="space-y-8">
-                {/* Experience AI’s Magic:  */}
-                <div className="bg-yellow-300/10 p-4 rounded-lg shadow-md">
-                  <h3 className="text-2xl font-semibold text-[#C7ED67] mt-4">
-                  Orientation:
-                  </h3>
-                  <p className="mt-2">
-                  Start strong with an inspiring introduction.     
-                  </p>
-                  <h3 className="text-2xl font-semibold text-[#C7ED67] mt-4">
-                    Hackathon: 
-                  </h3>
-                  <p className="mt-2">
-                    Build AI-powered solutions under time pressure.   
-                  </p>
-                  <h3 className="text-2xl font-semibold text-[#C7ED67] mt-4">
-                    Presentation: 
-                  </h3>
-                  <p className="mt-2">
-                  Showcase your ideas to expert judges and battle for the crown.   
-                  </p>
-                  <h3 className="text-2xl font-semibold text-[#C7ED67] mt-4">
-                    Prize Distribution: 
-                  </h3>
-                  <p className="mt-2">
-                  Winner Prize Distribution by Judges. 
-                  </p>
+                <div className="bg-yellow-300/10 p-4 rounded-lg shadow-md flex justify-center">
+                    <img 
+                      src="https://res.cloudinary.com/dqdtbavzj/image/upload/f_auto,q_auto/k6ysjji7lpyrudwnnwr8" 
+                      alt="timeline" 
+                      className="rounded-lg"
+                    />
+                  </div>
                 </div>
-              </div>
             </section>
 
             {/* Why Participants */}
