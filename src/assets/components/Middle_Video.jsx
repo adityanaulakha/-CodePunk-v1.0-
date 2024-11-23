@@ -134,7 +134,7 @@ const LandingPage = () => {
               <div className="space-y-8">
                 <div className="bg-yellow-300/10 p-4 rounded-lg shadow-md flex justify-center">
                     <img 
-                      src="https://res.cloudinary.com/dqdtbavzj/image/upload/f_auto,q_auto/k6ysjji7lpyrudwnnwr8" 
+                      src="https://res.cloudinary.com/dp2uwbkvw/image/upload/e_improve:outdoor/c_crop,h_3544,w_3200/c3kibljhpyiwfxeadwxv" 
                       alt="timeline" 
                       className="rounded-lg"
                     />
